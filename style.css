@@ -1,0 +1,80 @@
+/* Sudden Attack Master Guide Custom Styles */
+
+:root {
+    --sa-red: #dc2626;
+    --sa-dark: #09090b;
+}
+
+body {
+    background-color: var(--sa-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Transitions for Views */
+.view {
+    transition: all 0.5s ease;
+}
+
+.view.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.view.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 5px;
+    border: 2px solid #09090b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ef4444;
+}
+
+/* Custom Map Card Styles */
+.map-card-img {
+    transition: transform 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.map-card:hover .map-card-img {
+    transform: scale(1.1);
+}
+
+/* Tab Button Animation */
+.tab-btn.active {
+    background-color: var(--sa-red);
+    color: white;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+/* YouTube Container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
